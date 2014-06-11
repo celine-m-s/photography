@@ -1,5 +1,9 @@
 
-<?php include 'header.php' ?>
+<?php
+	$title = "Photographies de Céline M.S.";
+	$description = "Photographie d'art - vente en ligne des créations de Céline Martinet Sanchez";
+	include "header.php"
+?>
 
 		<div class="col-sm-9 home">
 			<section id="home" class="row">

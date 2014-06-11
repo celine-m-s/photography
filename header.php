@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Photographies de Céline Martinet Sanchez</title>
-	<meta name="description" content="Photographie d'art - vente en ligne des créations de Céline Martinet Sanchez">
+	<title><?php echo $title; ?></title>
+	<meta name="description" content="<?php echo $description; ?>" >
 	<meta charset="UTF-8">
 
 	<!-- Responsive baby! -->
