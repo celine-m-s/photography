@@ -1,115 +1,174 @@
-
 /*###########################################*/
 /*##########  General parameters  ###########*/
 /*###########################################*/
-
 @font-face {
-    font-family: 'aaarghnormal';
-    src: url('aaargh_normal_macroman/Aaargh-webfont.eot');
-    src: url('aaargh_normal_macroman/Aaargh-webfont.eot?#iefix') format('embedded-opentype'),
-         url('aaargh_normal_macroman/Aaargh-webfont.woff') format('woff'),
-         url('aaargh_normal_macroman/Aaargh-webfont.ttf') format('truetype'),
-         url('aaargh_normal_macroman/Aaargh-webfont.svg#aaarghnormal') format('svg');
-    font-weight: normal;
-    font-style: normal;
+  font-family: 'aaarghnormal';
+  src: url("fonts/aaargh_normal_macroman/Aaargh-webfont.eot");
+  src: url("fonts/aaargh_normal_macroman/Aaargh-webfont.eot?#iefix") format("embedded-opentype"), url("fonts/aaargh_normal_macroman/Aaargh-webfont.woff") format("woff"), url("fonts/aaargh_normal_macroman/Aaargh-webfont.ttf") format("truetype"), url("fonts/aaargh_normal_macroman/Aaargh-webfont.svg#aaarghnormal") format("svg");
+  font-weight: normal;
+  font-style: normal;
 }
 
 @font-face {
-    font-family: 'jenna_sueregular';
-    src: url('jennasue/jennasue-webfont.eot');
-    src: url('jennasue/jennasue-webfont.eot?#iefix') format('embedded-opentype'),
-         url('jennasue/jennasue-webfont.woff') format('woff'),
-         url('jennasue/jennasue-webfont.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
-
+  font-family: 'jenna_sueregular';
+  src: url("fonts/jennasue/jennasue-webfont.eot");
+  src: url("fonts/jennasue/jennasue-webfont.eot?#iefix") format("embedded-opentype"), url("fonts/jennasue/jennasue-webfont.woff") format("woff"), url("fonts/jennasue/jennasue-webfont.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
 }
 
+/* line 28, style.scss */
 h1, h2, h3, h4, h5, h6, p, header, footer, section, article {
-	font-family: 'aaarghnormal', sans-serif;
+  font-family: 'aaarghnormal', sans-serif;
 }
 
+/* line 32, style.scss */
 body {
-	background-color: black;
-	color:white;
+  background-color: black;
+  color: white;
 }
 
 /*###########################################*/
 /*################  Header  #################*/
 /*###########################################*/
-
+/* line 41, style.scss */
 #avatar {
-	border-radius: 50%;
+  border-radius: 50%;
 }
 
+/* line 45, style.scss */
 header {
-	/*background-image: url(../images/paper_fibers/paper_fibers.png);*/
-	background-image: url(../images/lightpaperfibers/lightpaperfibers.png);
-	height:100%;
-	color:black;
-	width:100%;
-	text-align: center;
+  background-image: url(../images/lightpaperfibers/lightpaperfibers.png);
+  height: 100%;
+  color: black;
+  width: 100%;
+  text-align: center;
 }
 
+/* line 53, style.scss */
 #header-top {
-	padding: 2em 0;
+  padding: 2em 0;
 }
 
+/* line 57, style.scss */
 #header-top p {
-	font-family: 'jenna_sueregular', sans-serif;
-	line-height: 1em;
-	font-size: 2em;
+  font-family: 'jenna_sueregular', sans-serif;
+  line-height: 1em;
+  font-size: 2em;
 }
 
+/* line 63, style.scss */
 #header-top img {
-	margin-bottom:2em;
+  margin-bottom: 2em;
 }
 
+/* line 67, style.scss */
 .nav-toggle {
-	padding-bottom: 1em;
-	color: #6E7476;
-	line-height: 2em;
+  padding-bottom: 1em;
+  color: #6E7476;
+  line-height: 2em;
 }
 
 /*Pages*/
-
+/* line 75, style.scss */
 #pages li {
-	padding: 0.5em 0;
+  padding: 0.5em 0;
+  border-top: 1px solid transparent;
+  border-bottom: 1px solid transparent;
 }
 
+/* line 81, style.scss */
 #pages li:hover {
-	border-top: 1px solid #6E7476;
-	border-bottom: 1px solid #6E7476;
+  border-top: 1px solid #6E7476;
+  border-bottom: 1px solid #6E7476;
 }
 
 /*cart*/
+/* line 87, style.scss */
 #cart {
-	margin:2em 0;
+  margin: 2em 0;
 }
 
 /*Social Media*/
+/* line 92, style.scss */
 .rs {
-	padding-bottom:2em;
+  padding-bottom: 2em;
 }
 
+/* line 96, style.scss */
 .rs li {
-	display: inline;
-	font-size:2em;
+  display: inline;
+  font-size: 2em;
 }
 
 /*###########################################*/
 /*################  Home  #################*/
 /*###########################################*/
-
-#home {
-	padding-top: 6%;
+/* line 106, style.scss */
+#home figure {
+  overflow: hidden;
+  position: relative;
 }
 
+/* line 111, style.scss */
+#home .description {
+  background: rgba(0, 0, 0, 0);
+  color: white;
+  width: 100%;
+  opacity: 0;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: 100;
+  padding: 2em;
+  -webkit-transition: all 500ms;
+  -moz-transition: all 500ms;
+  transition: all 500ms;
+}
+
+/* line 127, style.scss */
+#home figure:hover figcaption {
+  opacity: 0.8;
+  -webkit-transition: all 500ms;
+  -moz-transition: all 500ms;
+  transition: all 500ms;
+}
+
+/* line 134, style.scss */
+#home .description p {
+  color: white;
+  padding-top: 0.2em;
+}
+
+/* line 139, style.scss */
+#home .full {
+  height: 100%;
+}
+
+/*pictures*/
+/* line 144, style.scss */
+#home figure .big {
+  width: 400px;
+}
+
+/* line 148, style.scss */
+#home figure .small {
+  width: 200px;
+}
+
+@media screen and (min-width: 1000px) {
+  /* line 153, style.scss */
+  #home .right-column {
+    margin-top: 3%;
+    margin-bottom: 3%;
+    vertical-align: middle;
+  }
+}
 /*###########################################*/
 /*################  Footer  #################*/
 /*###########################################*/
-
+/* line 163, style.scss */
 footer {
-	color:#6E7476;
-	font-size:0.5em;
+  color: #6E7476;
+  font-size: 0.5em;
 }
