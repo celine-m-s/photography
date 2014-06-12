@@ -35,8 +35,18 @@ body {
   color: $white;
 }
 
+a {
+  text-decoration: none;
+  color: $red;
+}
+
+a:hover {
+  text-decoration: none;
+  color: $light-blue;
+}
+
 /*###########################################*/
-/*################  Header  #################*/
+/*#############  Left Navbar  ###############*/
 /*###########################################*/
 /* line 41, style.scss */
 #avatar {
@@ -44,11 +54,9 @@ body {
 }
 
 /* line 45, style.scss */
-header {
-  background-image: url(../images/lightpaperfibers/lightpaperfibers.png);
-  height: 100%;
+#left-navbar {
+  background-image: $background-header;
   color: $red;
-  width: 100%;
   text-align: center;
 }
 
@@ -62,8 +70,15 @@ header {
   font-family: $jenna;
   color: $dark-blue;
   line-height: 1em;
-  font-size: 3em;
+  font-size: 2em;
 }
+
+#header-top h1, h2 {
+  font-size: 1.5em;
+  line-height: 1em;
+  margin:0 auto;
+  font-weight: normal;
+} 
 
 /* line 63, style.scss */
 #header-top img {
@@ -77,6 +92,25 @@ header {
   line-height: 2em;
 }
 
+.nav-collapse ul.sub-menu {
+  display: none;
+}
+
+.nav-collapse ul li:last-child:hover .sub-menu{
+  display: block;
+  margin-top: 0.5em;
+}
+
+#pages .sub-menu li {
+  border-bottom: none;
+  border-top: none;
+}
+
+#pages .sub-menu li:hover {
+  border-bottom: none;
+  border-top: none;
+}
+ 
 /*Pages*/
 /* line 75, style.scss */
 
@@ -96,16 +130,10 @@ header {
   border-bottom: 1px solid $light-grey;
 }
 
-/*cart*/
-/* line 87, style.scss */
-#cart {
-  margin: 2em 0;
-}
-
 /*Social Media*/
 /* line 92, style.scss */
 .rs {
-  padding-bottom: 2em;
+  padding: 2em 0;
 }
 
 /* line 96, style.scss */
@@ -177,6 +205,68 @@ header {
     vertical-align: middle;
   }
 }
+
+/*###########################################*/
+/*################  Pages  ##################*/
+/*###########################################*/
+
+h1.page-title {
+  text-align: center;
+  font-family: $jenna;
+  font-size: 3em;
+  font-weight: 100;
+}
+
+#content a {
+  color: $light-blue;
+}
+
+.woocommerce ul.products li.product, .woocommerce-page ul.products li.product {
+text-align:center;
+}
+.woocommerce .products .star-rating, .woocommerce-page .products .star-rating {
+float:none;
+display:block;
+margin-left:auto;
+margin-right:auto;
+}
+
+.container {
+  width: 80%;
+}
+
+.product .description {
+  background: $black;
+  color: $white;
+  width: 100%;
+  opacity: 0;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  padding: 2em;
+  height:100%;
+  -webkit-transition: all 500ms;
+  -moz-transition: all 500m;
+  transition: all 500ms;
+}
+
+.product:hover .description {
+  opacity: 0.8;
+  -webkit-transition: all 500ms;
+  -moz-transition: all 500ms;
+  transition: all 500ms;
+}
+
+
+/*###########################################*/
+/*#########  Single product page  ###########*/
+/*###########################################*/
+
+.container > .product {
+  padding-top: 3em;
+}
+
+
 /*###########################################*/
 /*################  Footer  #################*/
 /*###########################################*/
@@ -184,4 +274,5 @@ header {
 footer {
   color: #6E7476;
   font-size: 0.5em;
+  text-align:center;
 }
