@@ -14,7 +14,7 @@ global $post, $product, $woocommerce;
 $attachment_ids = $product->get_gallery_attachment_ids();
 
 if ( $attachment_ids ) {
-	?>
+	?> Blaaaaaaaaaaaaaaaa
 	<div class="thumbnails"><?php
 
 		$loop = 0;

@@ -15,8 +15,9 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 	
 	<?php do_action( 'woocommerce_before_shop_loop_item' ); ?>
 
-	<div class="description">
-	<div class="product"><a href="<?php the_permalink(); ?>">
+	<div class="product">
+		<div class="thumbnail-picture">
+		<a href="<?php the_permalink(); ?>">
 
 		<?php
 			/**
@@ -28,7 +29,8 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 			 
 			do_action( 'bs_before_shop_loop_item_title' ); 
 		?>
-
+		</div>
+		<div class="thumbnail-description">
 		<h3><?php the_title(); ?></h3>
 
 		<?php
@@ -39,9 +41,10 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 			 */
 			do_action( 'woocommerce_after_shop_loop_item_title' );
 		?>
-</div>
+
 	</a>
 
 	<?php do_action( 'woocommerce_after_shop_loop_item' ); ?>
+	</div>
 	</div>
 </div>

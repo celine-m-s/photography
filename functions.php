@@ -46,7 +46,7 @@ add_filter('the_excerpt', 'excerpt_read_more_link');
 
 // Par défaut, WP affiche 55 premiers mots dans l'extrait. Vous pouvez le changer: 
 function custom_excerpt_length( $length ) {
-    return 20;
+  return 20;
 }
 add_filter( 'excerpt_length', 'custom_excerpt_length', 999 );
 
@@ -65,8 +65,16 @@ function my_theme_wrapper_end() {
 
 /** Remove Showing results functionality site-wide */
 function woocommerce_result_count() {
-        return;
+  return;
 }
 
 remove_action( 'woocommerce_before_shop_loop', 'woocommerce_catalog_ordering', 30 );
 remove_action( 'woocommerce_before_main_content','woocommerce_breadcrumb', 20, 0);
+
+add_filter( 'woocommerce_product_tabs', 'woo_remove_product_tabs', 98 );
+ 
+
+function wc_remove_related_products( $args ) {
+  return array();
+}
+add_filter('woocommerce_related_products_args','wc_remove_related_products', 10); 
